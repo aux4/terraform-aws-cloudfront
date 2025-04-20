@@ -62,6 +62,10 @@ resource "aws_lambda_function" "website_lambda" {
 
   source_code_hash = filebase64sha256(var.lambda_filename)
 
+  environment {
+    variables = var.lambda_environment_variables  
+  }
+
   runtime     = var.lambda_runtime
   memory_size = var.lambda_memory_size
   timeout     = var.lambda_timeout

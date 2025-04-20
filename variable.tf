@@ -49,6 +49,12 @@ variable "lambda_timeout" {
   default     = 15
 }
 
+variable "lambda_environment_variables" {
+  description = "The environment variables for the Lambda function"
+  type        = map(string)
+  default     = {}
+}
+
 variable "cloudfront_price_class" {
   description = "The CloudFront price class"
   type        = string
