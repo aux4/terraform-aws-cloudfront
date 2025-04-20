@@ -20,10 +20,6 @@ module "cloudfront" {
   lambda_runtime = "nodejs22.x" # default value
   lambda_memory_size = 128 # default value
   lambda_timeout = 15 # default value
-  lambda_environment_variables = {
-    "key1" = "value1"
-    "key2" = "value2"
-  }
 
   cloudfront_price_class = "PriceClass_All" # default value
   
